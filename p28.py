@@ -129,3 +129,62 @@ print(b)
 a=[10,20,30,[40,50,60]]
 print(a)
 
+# list function
+
+a=list('josekj')
+print(a)
+
+# slicing nested list
+
+x=[[10,20,30],
+[40,50,60],
+[70,80,90],
+[34,56,78],
+[99,77,44]]
+
+print(x)
+print(x[:][0][0])
+
+# filter function 
+
+a=[0,20,34,55,67,78]
+def high_marks(n):
+	if n>=60:
+		return True
+h=filter(high_marks,a)
+for i in h:
+	print(i)
+
+# map function
+
+a=[10,20,30,40,50,60]
+
+def inc(n):
+	return n+2
+
+result=list(map(inc,a))
+print(result)
+
+result=list(map(lambda n:n+4,a))
+print(result)
+
+# reduce function
+
+from functools import *
+
+a=[10,20,30,40,50]
+
+result=reduce(lambda n,m:n+m,a)
+print(result)
+
+# generator function yield statement and next function
+
+def disp99(a,b):
+	yield a
+	yield b 
+result=disp99(10,20)
+print(type(result))
+print(next(result))
+print(next(result))
+print(list(result))
+
